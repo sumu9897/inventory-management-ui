@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+  line-height: 1.5;
+}
+
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  color: #1f3c88;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #555;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.form-card h2,
+.table-card h2 {
+  margin-bottom: 18px;
+  color: #1f3c88;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  padding: 11px 12px;
+  border: 1px solid #cfd7e3;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+}
+
+.form-group input:focus {
+  border-color: #1f3c88;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.button-group {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.btn-primary {
+  background: #1f3c88;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #17306e;
+}
+
+.btn-secondary {
+  background: #777;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5d5d5d;
+}
+
+.btn-refresh {
+  background: #0ea5a4;
+  color: white;
+}
+
+.btn-refresh:hover {
+  background: #0b8483;
+}
+
+.btn-edit {
+  background: #f0ad4e;
+  color: white;
+  margin-right: 6px;
+}
+
+.btn-edit:hover {
+  background: #d99634;
+}
+
+.btn-delete {
+  background: #d9534f;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #b93d39;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+thead {
+  background: #1f3c88;
+  color: white;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #d9e1ec;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8fbff;
+}
+
+.empty {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.message {
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.message.success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.message.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

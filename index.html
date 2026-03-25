@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Inventory Dashboard</h1>
+      
+    </header>
+
+    <section class="card form-card">
+      <h2 id="form-title">Add New Item</h2>
+
+      <div id="message" class="message hidden"></div>
+
+      <form id="item-form">
+        <input type="hidden" id="item-id" />
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Product Name</label>
+            <input type="text" id="name" placeholder="Enter product name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category</label>
+            <input type="text" id="category" placeholder="Enter category" required />
+          </div>
+
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" placeholder="Enter quantity" min="0" required />
+          </div>
+
+          <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" id="price" placeholder="Enter price" min="0" step="0.01" required />
+          </div>
+
+          <div class="form-group full-width">
+            <label for="supplier">Supplier</label>
+            <input type="text" id="supplier" placeholder="Enter supplier name" required />
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button type="submit" class="btn btn-primary" id="submit-btn">Add Item</button>
+          <button type="button" class="btn btn-secondary hidden" id="cancel-edit-btn">Cancel Edit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card table-card">
+      <div class="table-header">
+        <h2>All Inventory Items</h2>
+        <button class="btn btn-refresh" id="refresh-btn">Refresh</button>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Supplier</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="item-table-body">
+            <tr>
+              <td colspan="7" class="empty">Loading items...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
